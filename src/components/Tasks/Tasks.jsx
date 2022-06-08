@@ -9,7 +9,7 @@ const Tasks = () => {
     <>
       <ul data-testid="tasks" className={styles.tasks}>
         {/* Task List */}
-        {data.map((d)=>{return (<Task></Task>)})}
+        {data.map((d)=>{return (<Task props={{d}} key={d.id}></Task>)})}
       </ul>
       <div data-testid="tasks-empty" className={styles.empty}>
         {/* Show when No Tasks are present */}
