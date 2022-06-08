@@ -7,8 +7,8 @@ const Task = ({props}) => {
   const {id,text,done,count}=props.d
   return (
     <li data-testid="task" className={styles.task}>
-      <input  type="checkbox" data-testid="task-checkbox" />
-      <div style={{}} data-testid="task-text">{text}</div>
+      <input checked={done}  type="checkbox" data-testid="task-checkbox" />
+      <div className={done?styles.text:null} data-testid="task-text">{text}</div>
       {/* Counter here */}
       <Counter props={count}/>
       <button data-testid="task-remove-button"></button>

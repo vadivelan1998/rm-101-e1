@@ -3,3 +3,7 @@
   display: flex;
 
 }
+.text
+{
+  text-decoration: line-through;
+}
